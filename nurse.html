@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Birth Record App</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+    </head>
+    <body>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header">Nurse</h2>
+                </div>
+
+                <div style="color: white;">
+                    <a href="/register">Add patient</a>
+
+                    <div style="margin-top: 10px; margin-bottom: 10px;">Patients List</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email address</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Date of Birth</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="visitors">
+                            <tr>
+                                <td>1</td>
+                                <td>solzy</td>
+                                <td>solzy@gmail.com</td>
+                                <td>first name</td>
+                                <td>last name</td>
+                                <td>date of birth</td>
+                                <td>
+                                    <div>
+                                        <a href="/visitor/1/edit">Edit</a>
+                                        <button onclick="deleteUserRecord(1)">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="/js/request/fetch.js"></script>
+    <script src="/js/nurse.js"></script>
+
+</html>
